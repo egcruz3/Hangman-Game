@@ -13,7 +13,7 @@ function startGame() {
   }
 
 
-  guessCount = 10;
+  guessCount = 5;
   document.getElementById('guessCount').innerHTML = "Guesses remaining: " + guessCount;
   drawWord(); // This function outputs the hidden word for the user
   document.getElementById('result').innerHTML = "";
@@ -40,7 +40,9 @@ function guess() {
 }
 
 function pickSecretWord() {
-  var var animals = ["elephant", "grasshopper", "chimpanzee", "hummingbird", "porcupine", "salamander", "crocodile"]; // Create an array of words
+  var animals = ["elephant", "grasshopper", "chimpanzee", "hummingbird", 
+   "porcupine", "salamander", "crocodile"]; // Create an array of words
+
   var secretWordSelector = Math.floor((Math.random() * animals.length)); // Pick a random word from the array
   console.log("Secret word: " + wordList[secretWordSelector]) // Output the selected word to the console for easy testing
   return wordList[secretWordSelector]; // Return the secret word.
